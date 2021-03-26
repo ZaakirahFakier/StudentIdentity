@@ -8,7 +8,7 @@ package za.ac.cput.subjectreport;
 /**
  *
  * @author Breyton Ernstzen - 217203027
- * This is the testing branch
+ * This is the testing branch for student reports
  */
 public class Report {
     private String studName,studSurname,course;
