@@ -11,42 +11,24 @@ package za.ac.cput.subjectreport;
  * This is the testing branch for student reports
  */
 public class Report {
-    private String studName,studSurname,course;
-    private long studNum;
-    private int averageMark;
-      
-    public void setName(String name){
-        this.studName = name;
-    }
+
     public String getName(){
-        return studName;
-    }
-    public void setSurname(String surname){
-        this.studSurname = surname;
+        return "Breyton";
     }
     public String getSurname(){
-        return studSurname;
-    }
-    public void setStudentNumber(long studentNumber){
-        this.studNum = studentNumber;
+        return "Ernstzen";
     }
     public long getStudentNumber(){
-        return studNum;
-    }
-    public void setCourse(String course){
-        this.course = course;
+        return 217203027;
     }
     public String getCourse(){
-        return course;
+        return "Applications Development";
     }
-    public void setAverageMark(int averageMark){
-        this.averageMark = averageMark;
+    public double getAverageMark(){
+        return 50;
     }
-    public int getAverageMark(){
-        return averageMark;
     }
-    public String toString(){
-        String str = String.format("");
-        return str;
-    }
-}
+    
+    
+    
+
