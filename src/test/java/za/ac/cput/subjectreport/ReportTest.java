@@ -23,15 +23,9 @@ import org.junit.jupiter.api.Timeout;
  *
  * @author Breyton Ernstzen
  */
-@Disabled("Disabled by assignment instruction")
+@Disabled("Disable all tests by assignment instruction")
 public class ReportTest {
-     
-    
-    @BeforeEach
-    public void setUp() {
-            
-    }
-    
+         
     @Test 
     @Timeout (5) 
     public void testStudentName() throws InterruptedException{
