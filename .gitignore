@@ -2,4 +2,6 @@
 #For NetBeans only.
 
 pom.xml
+nb-configuration.xml
+
 
