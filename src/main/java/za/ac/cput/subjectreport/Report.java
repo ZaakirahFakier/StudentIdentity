@@ -9,9 +9,11 @@ package za.ac.cput.subjectreport;
  *
  * @author Breyton Ernstzen - 217203027
  * This is the testing branch for student report
+ * This program test for student details
  */
 public class Report {
-
+   
+    
     public String getName(){
         return "Breyton";
     }
@@ -27,6 +29,7 @@ public class Report {
     public double getAverageMark(){
         return 50;
     }
+   
     }
     
     
