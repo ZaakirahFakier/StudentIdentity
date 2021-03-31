@@ -1,7 +1,7 @@
 #Files that must be ignored by GIT.
 #For NetBeans only.
 
-pom.xml
+
 nb-configuration.xml
 
 
