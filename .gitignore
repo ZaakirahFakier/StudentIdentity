@@ -1,7 +1,9 @@
 #Files that must be ignored by GIT.
 #For NetBeans only.
 
-
+/nbproject/
 nb-configuration.xml
+build.xml
+manifest.mf
 
 
