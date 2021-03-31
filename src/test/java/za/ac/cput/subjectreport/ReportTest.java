@@ -21,95 +21,98 @@ import org.junit.jupiter.api.Timeout;
 
 /**
  *
- * @author Breyton Ernstzen
+ * @author Breyton Ernstzen - 217203027
  */
-@Disabled("Disable all tests by assignment instruction")
+
 public class ReportTest {
          
     @Test 
-    @Timeout (5) 
-    public void testStudentName() throws InterruptedException{
+    public void testEquality() throws InterruptedException{ //This method checks for objcect quality
        Report studentName = new Report();
+       Report studentSurname = new Report();
+       Report studentNumber = new Report();
+       Report studentCourse = new Report();
+       Report studentAverage = new Report();
        
-       String expected = studentName.getName();
-       String actual = "Breyton";
-       assertEquals(expected,actual);
+       String expectedName = studentName.getName();
+       String actualName = "Breyton";
+       assertEquals(expectedName,actualName);
+       
+       String expectedSurname = studentSurname.getSurname();
+       String actualSurname = "Ernstzen";
+       assertEquals(expectedSurname,actualSurname);
+        
+       long expectedStudentNumber = studentNumber.getStudentNumber();
+       long actualStudentNumber = 217203027;
+       assertEquals(expectedStudentNumber,actualStudentNumber);
+       
+       String expectedCourseName = studentCourse.getCourse();
+       String actualCourseName = "Applications Development";
+       assertEquals(expectedCourseName,actualCourseName);//Test for equality
+       
+       double expectedAverage = studentAverage.getAverageMark();
+       double actualAverage = 50;
+       assertEquals(expectedAverage,actualAverage);//Test for equality
       
        assertSame("Breyton",studentName.getName());   //tests for identity
        assertNotSame("John",studentName.getName()); //name shouldnt be identical
-       
-       Thread.sleep(4000);
-       System.out.println("Test sucessfully passed within time");
-       
+           
     }
 
     @Test
-    @Timeout (5)
-    public void testStudentSurname() throws InterruptedException{
+    public void testIdentity() throws InterruptedException{ //This method checks for object identity
+       Report studentName = new Report();
        Report studentSurname = new Report();
+       Report studentNumber = new Report();
+       Report studentCourse = new Report();
+       Report studentAverage = new Report();Report student2Average = studentAverage;
        
-       String expected = studentSurname.getSurname();
-       String actual = "Ernstzen";
-       assertEquals(expected,actual); //Test for equality
+       assertSame("Breyton",studentName.getName());   //tests for identity
+       assertNotSame("John",studentName.getName());
        
        assertSame("Ernstzen",studentSurname.getSurname());//Checks for identity
        assertNotSame("Adams",studentSurname.getSurname());//Object is not identical 
        
-       Thread.sleep(4000);
-       System.out.println("Test sucessfully passed within time");
+       assertSame(studentAverage,student2Average);//Checks for identity
+       assertNotSame(studentCourse,studentNumber);//Object is not identical
+             
     }
 
     @Test
-    @Timeout (5)
-    public void testStudentNumber() throws InterruptedException{ //Come back to this method again
-        Report studentSurname1 = new Report();
-        Report studentSurname2 = studentSurname1;
-        Report studentSurname3 = new Report();
-        
-        long expected = studentSurname1.getStudentNumber();
-        long actual = 217203027;
-        assertEquals(expected, actual);//Test for equality
-        
-        assertSame(studentSurname1,studentSurname2);//Checks for identity
-        assertNotSame(studentSurname1,studentSurname3);//Object is not identical 
-        
-        Thread.sleep(4000);
-        System.out.println("Test sucessfully passed within time");
+    public void testFailure() throws InterruptedException{  //This methods dileberately fails a test
+       Report studentName = new Report();
+       Report studentSurname = new Report();
+       
+       String expectedName = studentName.getName();
+       String actualName = "John";
+       assertEquals(expectedName,actualName);
+       
+       String expectedSurname = studentSurname.getSurname();
+       String actualSurname = "Doe";
+       assertEquals(expectedSurname,actualSurname);
+     
     }
 
     @Test 
     @Timeout(5)
-    public void testStudentCourse() throws InterruptedException{
-        Report studentCourse = new Report();
-        Report twinStudent = studentCourse;
-        
-        String expected = studentCourse.getCourse();
-        String actual = "Applications Development";
-        assertEquals(expected, actual);//Test for equality
-        
-        assertSame(studentCourse,twinStudent); //Checks for identity
-        assertNotSame("Sports Management",studentCourse.getCourse());  //Object is not identical     
-        
-        Thread.sleep(4000);
+    public void testTimeout() throws InterruptedException{ //This method checks for timeout
+        Thread.sleep(4000); //Timeout in miliseconds
         System.out.println("Test sucessfully passed within time");
     }
     
     @Test 
-    @Timeout(5)
-    public void testAverageMark() throws InterruptedException{
-        Report student1Average = new Report();
-        Report student2Average = student1Average;
-        Report student3Average = new Report();
-        
-        double expected = student1Average.getAverageMark();
-        double actual = 50;
-        assertEquals(expected,actual);//Test for equality
-        
-        assertSame(student1Average,student2Average);//Checks for identity
-        assertNotSame(student3Average,student2Average);//Object is not identical
-        
-        Thread.sleep(4000);
-        System.out.println("Test sucessfully passed within time");
+    @Disabled("Disable all tests by assignment instruction")
+    public void testDisabling() throws InterruptedException{ //This method disables a test
+       Report studentName = new Report();
+       Report studentSurname = new Report();
+       
+       String expectedName = studentName.getName();
+       String actualName = "John";
+       assertEquals(expectedName,actualName);
+       
+       String expectedSurname = studentSurname.getSurname();
+       String actualSurname = "Doe";
+       assertEquals(expectedSurname,actualSurname);
     }
  
     
