@@ -23,7 +23,7 @@ import org.junit.jupiter.api.Timeout;
  *
  * @author Breyton Ernstzen
  */
-@Disabled("Disable all tests by assignment instruction")
+//@Disabled("Disable all tests by assignment instruction")
 public class ReportTest {
          
     @Test 
