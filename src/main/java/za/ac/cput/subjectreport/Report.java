@@ -12,7 +12,6 @@ package za.ac.cput.subjectreport;
  * This program test for student details
  */
 public class Report {
-   
     
     public String getName(){
         return "Breyton";
